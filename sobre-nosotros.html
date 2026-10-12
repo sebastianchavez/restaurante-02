@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bella Vista - Sobre Nosotros</title>
+  <meta name="description" content="Conoce la historia, misión y equipo detrás de Bella Vista.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-stone-50">
+
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
+
+  <!-- Hero Page -->
+  <section class="relative h-96 flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=80" 
+           alt="Cocina" 
+           class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
+    </div>
+    <div class="relative z-10 text-center px-4">
+      <p class="text-amber-400 uppercase tracking-[0.3em] text-sm mb-3 animate-fade-in">Conócenos</p>
+      <h1 class="text-6xl md:text-7xl font-serif font-bold text-white animate-fade-in-up drop-shadow-2xl">Sobre Nosotros</h1>
+      <p class="text-stone-200 mt-4 max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s;">
+        Una historia de pasión, tradición y excelencia culinaria
+      </p>
+    </div>
+  </section>
+
+  <!-- Nuestra Historia -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="animable">
+          <p class="text-amber-600 uppercase tracking-widest text-sm mb-2">Nuestra Historia</p>
+          <h2 class="text-5xl font-serif font-bold text-stone-900 mb-6">Un sueño hecho realidad</h2>
+          <div class="space-y-4 text-stone-600 leading-relaxed">
+            <p>
+              En 2009, un grupo de amigos apasionados por la gastronomía decidió materializar un sueño compartido: 
+              crear un espacio donde la comida fuera mucho más que sustento, donde cada plato contara una historia 
+              y cada visita se convirtiera en un recuerdo memorable.
+            </p>
+            <p>
+              Así nació <strong class="text-stone-900">Bella Vista</strong>, un nombre que honra las vistas panorámicas 
+              de nuestra ubicación original y que simboliza la claridad de nuestra visión: ofrecer lo mejor de la 
+              cocina internacional con identidad propia.
+            </p>
+            <p>
+              A lo largo de estos años, hemos crecido, aprendido y evolucionado, pero nunca hemos perdido de vista 
+              nuestros valores fundamentales: la calidad, la creatividad y el trato humano.
+            </p>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="aspect-square rounded-xl overflow-hidden shadow-lg bg-stone-100">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Plato gourmet" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                 onerror="this.onerror=null; this.src=window.generarFallbackSVG('Plato Gourmet', '#92400e', '#1c1917', '🍽️');">
+          </div>
+          <div class="aspect-square rounded-xl overflow-hidden shadow-lg bg-stone-100">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80" alt="Salón" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                 onerror="this.onerror=null; this.src=window.generarFallbackSVG('Salón Principal', '#b45309', '#292524', '🏛️');">
+          </div>
+          <div class="aspect-square rounded-xl overflow-hidden shadow-lg bg-stone-100">
+            <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600&q=80" alt="Mesa" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                 onerror="this.onerror=null; this.src=window.generarFallbackSVG('Mesa Preparada', '#9a3412', '#0c0a09', '🕯️');">
+          </div>
+          <div class="aspect-square rounded-xl overflow-hidden shadow-lg bg-stone-100">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80" alt="Cocina" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                 onerror="this.onerror=null; this.src=window.generarFallbackSVG('Cocina', '#c2410c', '#451a03', '🔥');">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Misión, Visión, Valores -->
+  <section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animable">
+        <p class="text-amber-600 uppercase tracking-widest text-sm mb-2">Nuestros Pilares</p>
+        <h2 class="text-5xl font-serif font-bold text-stone-900 mb-4">Misión, Visión y Valores</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-10 rounded-2xl shadow-lg animable hover:shadow-2xl transition-shadow duration-300">
+          <div class="w-16 h-16 service-icon-bg rounded-full flex items-center justify-center mb-6">
+            <i class="fas fa-bullseye text-white text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-serif font-bold text-stone-900 mb-4">Misión</h3>
+          <p class="text-stone-600 leading-relaxed">
+            Crear experiencias gastronómicas memorables a través de platos excepcionales, ingredientes premium 
+            y un servicio cálido que haga sentir a cada comensal como en casa.
+          </p>
+        </div>
+
+        <div class="bg-white p-10 rounded-2xl shadow-lg animable hover:shadow-2xl transition-shadow duration-300" style="animation-delay: 0.2s;">
+          <div class="w-16 h-16 service-icon-bg rounded-full flex items-center justify-center mb-6">
+            <i class="fas fa-eye text-white text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-serif font-bold text-stone-900 mb-4">Visión</h3>
+          <p class="text-stone-600 leading-relaxed">
+            Ser reconocidos como el restaurante referente de la región, manteniendo la excelencia, innovando 
+            constantemente y siendo embajadores de la buena gastronomía.
+          </p>
+        </div>
+
+        <div class="bg-white p-10 rounded-2xl shadow-lg animable hover:shadow-2xl transition-shadow duration-300" style="animation-delay: 0.4s;">
+          <div class="w-16 h-16 service-icon-bg rounded-full flex items-center justify-center mb-6">
+            <i class="fas fa-gem text-white text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-serif font-bold text-stone-900 mb-4">Valores</h3>
+          <p class="text-stone-600 leading-relaxed">
+            Excelencia, pasión, respeto, creatividad, compromiso y trabajo en equipo. Estos son los principios 
+            que guían cada acción y cada plato que servimos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nuestro Equipo -->
+  <section class="py-20 bg-stone-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animable">
+        <p class="text-amber-500 uppercase tracking-widest text-sm mb-2">El Equipo</p>
+        <h2 class="text-5xl font-serif font-bold mb-4">Las mentes creativas</h2>
+        <p class="text-stone-300 max-w-2xl mx-auto">Profesionales apasionados que hacen posible la magia cada día</p>
+      </div>
+
+      <div id="equipo-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Fallback estático (se reemplaza con JS) -->
+      <div class="text-center">
+        <div class="aspect-square rounded-2xl overflow-hidden mb-4 shadow-xl border-4 border-stone-800 flex items-center justify-center" style="background: linear-gradient(135deg, #92400e, #1c1917);">
+          <div class="text-center">
+            <div class="text-7xl mb-2">👨‍🍳</div>
+            <p class="text-amber-400 text-xs uppercase tracking-wider">Chef</p>
+          </div>
+        </div>
+        <h3 class="text-xl font-serif font-bold mb-1 text-white">Chef Alessandro Rossi</h3>
+        <p class="text-amber-500 text-sm uppercase tracking-wider mb-2">Chef Ejecutivo</p>
+      </div>
+      <div class="text-center">
+        <div class="aspect-square rounded-2xl overflow-hidden mb-4 shadow-xl border-4 border-stone-800 flex items-center justify-center" style="background: linear-gradient(135deg, #b45309, #292524);">
+          <div class="text-center">
+            <div class="text-7xl mb-2">👩‍🍳</div>
+            <p class="text-amber-400 text-xs uppercase tracking-wider">Chef</p>
+          </div>
+        </div>
+        <h3 class="text-xl font-serif font-bold mb-1 text-white">Chef Sofía Martínez</h3>
+        <p class="text-amber-500 text-sm uppercase tracking-wider mb-2">Chef de Cocina</p>
+      </div>
+      <div class="text-center">
+        <div class="aspect-square rounded-2xl overflow-hidden mb-4 shadow-xl border-4 border-stone-800 flex items-center justify-center" style="background: linear-gradient(135deg, #7c2d12, #1c1917);">
+          <div class="text-center">
+            <div class="text-7xl mb-2">🍷</div>
+            <p class="text-amber-400 text-xs uppercase tracking-wider">Sommelier</p>
+          </div>
+        </div>
+        <h3 class="text-xl font-serif font-bold mb-1 text-white">Carlos Mendoza</h3>
+        <p class="text-amber-500 text-sm uppercase tracking-wider mb-2">Sommelier</p>
+      </div>
+      <div class="text-center">
+        <div class="aspect-square rounded-2xl overflow-hidden mb-4 shadow-xl border-4 border-stone-800 flex items-center justify-center" style="background: linear-gradient(135deg, #c2410c, #44403c);">
+          <div class="text-center">
+            <div class="text-7xl mb-2">👩‍💼</div>
+            <p class="text-amber-400 text-xs uppercase tracking-wider">Sala</p>
+          </div>
+        </div>
+        <h3 class="text-xl font-serif font-bold mb-1 text-white">Lucía Fernández</h3>
+        <p class="text-amber-500 text-sm uppercase tracking-wider mb-2">Jefa de Sala</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Línea de tiempo -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animable">
+        <p class="text-amber-600 uppercase tracking-widest text-sm mb-2">Nuestro Recorrido</p>
+        <h2 class="text-5xl font-serif font-bold text-stone-900 mb-4">15 años de historia</h2>
+      </div>
+
+      <div class="space-y-8 max-w-3xl mx-auto">
+        <div class="flex gap-6 animable">
+          <div class="flex-shrink-0 w-20 h-20 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold text-lg">2009</div>
+          <div class="bg-stone-50 p-6 rounded-xl flex-1">
+            <h3 class="font-serif font-bold text-xl text-stone-900 mb-2">Fundación</h3>
+            <p class="text-stone-600">Abrimos nuestras puertas con un menú de 30 platos y un equipo de 8 personas.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-6 animable" style="animation-delay: 0.2s;">
+          <div class="flex-shrink-0 w-20 h-20 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold text-lg">2014</div>
+          <div class="bg-stone-50 p-6 rounded-xl flex-1">
+            <h3 class="font-serif font-bold text-xl text-stone-900 mb-2">Primera Estrella</h3>
+            <p class="text-stone-600">Obtuvimos nuestra primera distinción gastronómica y ampliamos el local.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-6 animable" style="animation-delay: 0.4s;">
+          <div class="flex-shrink-0 w-20 h-20 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold text-lg">2019</div>
+          <div class="bg-stone-50 p-6 rounded-xl flex-1">
+            <h3 class="font-serif font-bold text-xl text-stone-900 mb-2">Expansión de Carta</h3>
+            <p class="text-stone-600">Lanzamiento de nuestra carta de autor con más de 120 platos únicos.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-6 animable" style="animation-delay: 0.6s;">
+          <div class="flex-shrink-0 w-20 h-20 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold text-lg">2024</div>
+          <div class="bg-stone-50 p-6 rounded-xl flex-1">
+            <h3 class="font-serif font-bold text-xl text-stone-900 mb-2">Premio Excelencia</h3>
+            <p class="text-stone-600">Reconocidos como "Mejor Restaurante del Año" por la crítica especializada.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    initNavbar('sobre-nosotros');
+    initFooter();
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('equipo-container');
+      if (container && window.RESTAURANT_DATA) {
+        // Reemplazar con imágenes reales
+        container.innerHTML = window.RESTAURANT_DATA.equipo.map((m, i) => `
+          <div class="text-center group" style="opacity: 1;">
+            <div class="aspect-square rounded-2xl overflow-hidden mb-4 shadow-xl border-4 border-stone-800 group-hover:border-amber-600 transition-colors duration-300 bg-stone-700">
+              <img src="${m.imagen}" alt="${m.nombre}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                   onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'w-full h-full flex items-center justify-center\\' style=\\'background: linear-gradient(135deg, ${m.color1}, ${m.color2})\\'><div class=\\'text-center\\'><div class=\\'text-7xl mb-2\\'>${m.emoji}</div><p class=\\'text-amber-400 text-xs uppercase tracking-wider\\'>${m.rol}</p></div></div>';">
+            </div>
+            <h3 class="text-xl font-serif font-bold mb-1">${m.nombre}</h3>
+            <p class="text-amber-500 text-sm uppercase tracking-wider mb-2">${m.rol}</p>
+            <p class="text-stone-400 text-sm">${m.especialidad}</p>
+          </div>
+        `).join('');
+      }
+    });
+  </script>
+
+</body>
+</html>

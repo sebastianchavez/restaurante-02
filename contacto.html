@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bella Vista - Contacto</title>
+  <meta name="description" content="Contactanos para reservas, consultas o eventos especiales.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-stone-50">
+
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
+
+  <!-- Hero Page -->
+  <section class="relative h-96 flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80" 
+           alt="Contacto" 
+           class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
+    </div>
+    <div class="relative z-10 text-center px-4">
+      <p class="text-amber-400 uppercase tracking-[0.3em] text-sm mb-3 animate-fade-in">Hablemos</p>
+      <h1 class="text-6xl md:text-7xl font-serif font-bold text-white animate-fade-in-up drop-shadow-2xl">Contacto</h1>
+      <p class="text-stone-200 mt-4 max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s;">
+        Estamos para ayudarte en lo que necesites
+      </p>
+    </div>
+  </section>
+
+  <!-- Formulario + Info -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        
+        <!-- Formulario -->
+        <div class="animable">
+          <p class="text-amber-600 uppercase tracking-widest text-sm mb-2">Envíanos un mensaje</p>
+          <h2 class="text-4xl font-serif font-bold text-stone-900 mb-6">¿En qué podemos ayudarte?</h2>
+          <p class="text-stone-600 mb-8">
+            Completá el formulario y nos pondremos en contacto a la brevedad. Para reservas urgentes, llamanos directamente.
+          </p>
+
+          <form id="contact-form" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-stone-700 mb-2">Nombre *</label>
+                <input type="text" name="nombre" required
+                  class="form-input w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-lg"
+                  placeholder="Tu nombre">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-stone-700 mb-2">Teléfono</label>
+                <input type="tel" name="telefono"
+                  class="form-input w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-lg"
+                  placeholder="+54 11 ...">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-stone-700 mb-2">Email *</label>
+              <input type="email" name="email" required
+                class="form-input w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-lg"
+                placeholder="tu@email.com">
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-stone-700 mb-2">Asunto</label>
+              <select name="asunto" class="form-input w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-lg">
+                <option>Consulta general</option>
+                <option>Reserva de mesa</option>
+                <option>Evento privado</option>
+                <option>Catering</option>
+                <option>Otro</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-stone-700 mb-2">Mensaje *</label>
+              <textarea name="mensaje" rows="5" required
+                class="form-input w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-lg resize-none"
+                placeholder="Contanos en qué podemos ayudarte..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary w-full bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-lg font-medium transition-all duration-300 hover:shadow-xl inline-flex items-center justify-center">
+              <i class="fas fa-paper-plane mr-2"></i>
+              Enviar Mensaje
+            </button>
+          </form>
+        </div>
+
+        <!-- Información de contacto -->
+        <div class="animable" style="animation-delay: 0.2s;">
+          <p class="text-amber-600 uppercase tracking-widest text-sm mb-2">Información</p>
+          <h2 class="text-4xl font-serif font-bold text-stone-900 mb-6">Datos de contacto</h2>
+          
+          <div class="space-y-6 mb-8">
+            <div class="flex items-start space-x-4 p-4 bg-stone-50 rounded-xl">
+              <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-map-marker-alt text-white"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-stone-900 mb-1">Dirección</h3>
+                <p class="text-stone-600">Av. Libertador Bernardo O'Higgins 1234<br>Santiago Centro, Región Metropolitana</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 p-4 bg-stone-50 rounded-xl">
+              <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-phone text-white"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-stone-900 mb-1">Teléfono</h3>
+                <p class="text-stone-600">+56 2 2555 2345</p>
+                <p class="text-stone-600">WhatsApp: +56 9 5555 2345</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 p-4 bg-stone-50 rounded-xl">
+              <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-envelope text-white"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-stone-900 mb-1">Email</h3>
+                <p class="text-stone-600">reservas@bellavista.cl</p>
+                <p class="text-stone-600">eventos@bellavista.cl</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 p-4 bg-stone-50 rounded-xl">
+              <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fab fa-instagram text-white"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-stone-900 mb-1">Redes Sociales</h3>
+                <p class="text-stone-600">@bellavista.restaurant</p>
+                <p class="text-stone-600">Facebook: BellaVistaRestaurant</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mapa -->
+          <div class="map-container aspect-video bg-stone-200">
+            <iframe 
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-70.66%2C-33.45%2C-70.64%2C-33.43&amp;layer=mapnik&amp;marker=-33.44%2C-70.65" 
+              width="100%" 
+              height="100%" 
+              style="border:0; border-radius: 0.5rem;" 
+              loading="lazy"
+              title="Ubicación del restaurante en Santiago, Chile">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Horarios -->
+  <section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animable">
+        <p class="text-amber-600 uppercase tracking-widest text-sm mb-2">Cuándo puedes venir</p>
+        <h2 class="text-5xl font-serif font-bold text-stone-900 mb-4">Horarios de Atención</h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto">
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden animable">
+          <div id="horarios-container"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    initNavbar('contacto');
+    initFooter();
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('horarios-container');
+      if (container && window.RESTAURANT_DATA) {
+        container.innerHTML = window.RESTAURANT_DATA.horarios.map((h, i) => {
+          const esHoy = new Date().getDay() === (i + 1) % 7;
+          return `
+            <div class="flex justify-between items-center px-8 py-5 ${i < 3 ? 'border-b border-stone-100' : ''} ${esHoy ? 'bg-amber-50' : ''}">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-clock text-amber-600"></i>
+                <span class="font-semibold text-stone-900">${h.dia}</span>
+                ${esHoy ? '<span class="text-xs bg-amber-600 text-white px-2 py-1 rounded-full">Hoy</span>' : ''}
+              </div>
+              <span class="text-stone-600 ${h.horario === 'Cerrado' ? 'text-red-600 font-semibold' : ''}">${h.horario}</span>
+            </div>
+          `;
+        }).join('');
+        
+        setTimeout(() => {
+          if (window.initScrollAnimations) window.initScrollAnimations();
+        }, 100);
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bella Vista - Nuestros Servicios</title>
+  <meta name="description" content="Descubre todos los servicios que ofrece Bella Vista: restaurante, eventos, catering y más.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-stone-50">
+
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
+
+  <!-- Hero Page -->
+  <section class="relative h-96 flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80" 
+           alt="Servicios" 
+           class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
+    </div>
+    <div class="relative z-10 text-center px-4">
+      <p class="text-amber-400 uppercase tracking-[0.3em] text-sm mb-3 animate-fade-in">Lo que ofrecemos</p>
+      <h1 class="text-6xl md:text-7xl font-serif font-bold text-white animate-fade-in-up drop-shadow-2xl">Nuestros Servicios</h1>
+      <p class="text-stone-200 mt-4 max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s;">
+        Soluciones gastronómicas para cada ocasión
+      </p>
+    </div>
+  </section>
+
+  <!-- Servicios Grid -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animable">
+        <p class="text-amber-600 uppercase tracking-widest text-sm mb-2">Servicios</p>
+        <h2 class="text-5xl font-serif font-bold text-stone-900 mb-4">Una experiencia completa</h2>
+        <p class="text-stone-600 max-w-2xl mx-auto">
+          Desde una cena íntima hasta un gran evento corporativo, tenemos el servicio perfecto para vos.
+        </p>
+      </div>
+
+      <div id="servicios-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </div>
+  </section>
+
+  <!-- Proceso -->
+  <section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animable">
+        <p class="text-amber-600 uppercase tracking-widest text-sm mb-2">Nuestro Proceso</p>
+        <h2 class="text-5xl font-serif font-bold text-stone-900 mb-4">¿Cómo trabajamos?</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center animable">
+          <div class="w-20 h-20 mx-auto bg-amber-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4 shadow-lg">1</div>
+          <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Consulta</h3>
+          <p class="text-stone-600">Conversamos sobre tus necesidades y expectativas</p>
+        </div>
+
+        <div class="text-center animable" style="animation-delay: 0.2s;">
+          <div class="w-20 h-20 mx-auto bg-amber-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4 shadow-lg">2</div>
+          <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Diseño</h3>
+          <p class="text-stone-600">Creamos una propuesta personalizada</p>
+        </div>
+
+        <div class="text-center animable" style="animation-delay: 0.4s;">
+          <div class="w-20 h-20 mx-auto bg-amber-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4 shadow-lg">3</div>
+          <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Ejecución</h3>
+          <p class="text-stone-600">Llevamos a cabo cada detalle con excelencia</p>
+        </div>
+
+        <div class="text-center animable" style="animation-delay: 0.6s;">
+          <div class="w-20 h-20 mx-auto bg-amber-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4 shadow-lg">4</div>
+          <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Disfrute</h3>
+          <p class="text-stone-600">Vives una experiencia memorable</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 hero-gradient-3 text-white relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 text-center relative z-10 animable">
+      <h2 class="text-5xl font-serif font-bold mb-6">¿Tenés un evento especial?</h2>
+      <p class="text-xl text-stone-200 mb-10">Contactanos y diseñamos juntos la experiencia perfecta</p>
+      <a href="contacto.html" class="btn-primary inline-flex items-center bg-amber-600 hover:bg-amber-700 text-white px-10 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-2xl text-lg">
+        <i class="fas fa-envelope mr-2"></i>
+        Solicitar Cotización
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    initNavbar('servicios');
+    initFooter();
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('servicios-container');
+      if (container && window.RESTAURANT_DATA) {
+        container.innerHTML = window.RESTAURANT_DATA.servicios.map((s, i) => `
+          <div class="bg-white rounded-2xl overflow-hidden shadow-md animable hover:shadow-2xl transition-all duration-300 group" style="animation-delay: ${i * 0.1}s; opacity: 1;">
+            <div class="relative h-48 overflow-hidden bg-stone-100">
+              <img src="${s.imagen}" alt="${s.titulo}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                   onerror="this.onerror=null; this.src=window.generarFallbackSVG('${s.titulo.replace(/'/g, "\\'")}', '${s.color1 || '#78350f'}', '${s.color2 || '#1c1917'}', '${s.emoji || '🍽️'}');">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center shadow-lg z-10">
+                <i class="fas ${s.icono} text-white"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-serif font-bold text-stone-900 mb-3">${s.titulo}</h3>
+              <p class="text-stone-600 leading-relaxed mb-4">${s.descripcion}</p>
+              <a href="contacto.html" class="inline-flex items-center text-amber-600 font-medium hover:text-amber-700 transition-colors">
+                Más información <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </a>
+            </div>
+          </div>
+        `).join('');
+        
+        setTimeout(() => {
+          if (window.initScrollAnimations) window.initScrollAnimations();
+        }, 100);
+        
+        // Asegurar visibilidad
+        setTimeout(() => {
+          const items = container.querySelectorAll('.animable');
+          items.forEach(item => {
+            item.style.opacity = '1';
+            item.classList.add('animate-fade-in-up');
+          });
+        }, 300);
+      }
+    });
+  </script>
+
+</body>
+</html>

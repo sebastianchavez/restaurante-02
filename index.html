@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bella Vista - Restaurante | Inicio</title>
+  <meta name="description" content="Restaurante de cocina gourmet. Descubre sabores únicos en un ambiente elegante.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-stone-50">
+
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
+
+  <!-- Hero Section con imagen -->
+  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80" 
+           alt="Restaurante Bella Vista" 
+           class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
+    </div>
+    
+    <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+      <p class="text-amber-400 uppercase tracking-[0.3em] text-sm mb-4 animate-fade-in">Bienvenido a</p>
+      <h1 class="text-6xl md:text-8xl font-serif font-black text-white mb-6 animate-fade-in-up drop-shadow-2xl">
+        Bella Vista
+      </h1>
+      <p class="text-xl md:text-2xl text-stone-200 mb-4 font-light italic animate-fade-in-up" style="animation-delay: 0.2s;">
+        Sabores que cuentan historias
+      </p>
+      <p class="text-base md:text-lg text-stone-300 mb-10 max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.4s;">
+        Donde la tradición se encuentra con la innovación culinaria. Una experiencia gastronómica única te espera.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style="animation-delay: 0.6s;">
+        <a href="menu.html" class="btn-primary bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center justify-center">
+          <i class="fas fa-utensils mr-2"></i>
+          Ver Menú
+        </a>
+        <a href="contacto.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-white hover:text-stone-900 hover:scale-105 inline-flex items-center justify-center">
+          <i class="fas fa-calendar-check mr-2"></i>
+          Reservar Mesa
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white animate-bounce">
+      <i class="fas fa-chevron-down text-2xl"></i>
+    </div>
+  </section>
+
+  <!-- Estadísticas con imagen de fondo -->
+  <section class="relative py-20 bg-fixed bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80');">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="stat-card bg-white/10 backdrop-blur-sm p-8 rounded-xl text-center animable border border-white/20">
+          <div class="text-5xl font-serif font-bold text-amber-400 mb-2">15+</div>
+          <div class="text-stone-200 text-sm uppercase tracking-wider">Años de Experiencia</div>
+        </div>
+        <div class="stat-card bg-white/10 backdrop-blur-sm p-8 rounded-xl text-center animable border border-white/20" style="animation-delay: 0.1s;">
+          <div class="text-5xl font-serif font-bold text-amber-400 mb-2">50K+</div>
+          <div class="text-stone-200 text-sm uppercase tracking-wider">Clientes Felices</div>
+        </div>
+        <div class="stat-card bg-white/10 backdrop-blur-sm p-8 rounded-xl text-center animable border border-white/20" style="animation-delay: 0.2s;">
+          <div class="text-5xl font-serif font-bold text-amber-400 mb-2">120+</div>
+          <div class="text-stone-200 text-sm uppercase tracking-wider">Platos Únicos</div>
+        </div>
+        <div class="stat-card bg-white/10 backdrop-blur-sm p-8 rounded-xl text-center animable border border-white/20" style="animation-delay: 0.3s;">
+          <div class="text-5xl font-serif font-bold text-amber-400 mb-2">4.9</div>
+          <div class="text-stone-200 text-sm uppercase tracking-wider">Calificación</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Especialidades con imágenes reales -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animable">
+        <p class="text-amber-600 uppercase tracking-widest text-sm mb-2">Descubre</p>
+        <h2 class="text-5xl font-serif font-bold text-stone-900 mb-4">Nuestras Especialidades</h2>
+        <p class="text-stone-600 max-w-2xl mx-auto">Platos signature creados por nuestros chefs con los mejores ingredientes seleccionados.</p>
+      </div>
+
+      <div id="especialidades-container" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+    </div>
+  </section>
+
+  <!-- Sobre nosotros con imagen -->
+  <section class="relative py-20 bg-fixed bg-cover bg-center" style="background-image: linear-gradient(rgba(28, 25, 23, 0.92), rgba(28, 25, 23, 0.92)), url('https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=1920&q=80');">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="animable">
+          <p class="text-amber-400 uppercase tracking-widest text-sm mb-2">Nuestra Historia</p>
+          <h2 class="text-5xl font-serif font-bold text-white mb-6">Pasión por la gastronomía desde 2009</h2>
+          <p class="text-stone-300 text-lg mb-6 leading-relaxed">
+            Bella Vista nació del sueño de crear un espacio donde la excelencia culinaria se fusionara con la calidez humana. 
+            Durante más de 15 años, hemos perfeccionado cada receta, seleccionado cada ingrediente y formado a cada miembro 
+            de nuestro equipo para ofrecerte una experiencia memorable.
+          </p>
+          <p class="text-stone-400 mb-8 leading-relaxed">
+            Nuestra filosofía se basa en tres pilares: ingredientes de primera calidad, técnica impecable y un servicio 
+            que haga sentir a cada comensal como en casa.
+          </p>
+          <a href="sobre-nosotros.html" class="btn-primary inline-flex items-center bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-full font-medium transition-all duration-300">
+            Conoce Más <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+        <div class="animable">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" 
+                 alt="Plato gourmet" 
+                 class="rounded-2xl shadow-2xl w-full h-[500px] object-cover">
+            <div class="absolute -bottom-6 -left-6 bg-amber-600 text-white p-6 rounded-xl shadow-2xl">
+              <div class="text-4xl font-serif font-bold">15+</div>
+              <div class="text-sm uppercase tracking-wider">Años</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platos destacados con imagen -->
+  <section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animable">
+        <p class="text-amber-600 uppercase tracking-widest text-sm mb-2">Lo más pedido</p>
+        <h2 class="text-5xl font-serif font-bold text-stone-900 mb-4">Platos Destacados</h2>
+        <p class="text-stone-600 max-w-2xl mx-auto">Los favoritos de nuestros comensales</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="platos-destacados"></div>
+      <div class="text-center mt-12 animable">
+        <a href="menu.html" class="btn-primary inline-flex items-center bg-stone-900 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-medium transition-all duration-300">
+          Ver Menú Completo <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animable">
+        <p class="text-amber-600 uppercase tracking-widest text-sm mb-2">Testimonios</p>
+        <h2 class="text-5xl font-serif font-bold text-stone-900 mb-4">Lo que dicen nuestros clientes</h2>
+      </div>
+
+      <div id="testimonios-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- CTA Final con imagen -->
+  <section class="relative py-24 bg-fixed bg-cover bg-center" style="background-image: linear-gradient(rgba(180, 83, 9, 0.85), rgba(120, 53, 15, 0.85)), url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1920&q=80');">
+    <div class="max-w-4xl mx-auto px-4 text-center relative z-10 animable">
+      <h2 class="text-5xl md:text-6xl font-serif font-bold mb-6 text-white drop-shadow-2xl">¿Listo para una experiencia única?</h2>
+      <p class="text-xl text-white mb-10 drop-shadow-md">Reserva tu mesa ahora y descubre por qué somos el restaurante favorito de la ciudad.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contacto.html" class="btn-primary bg-white text-stone-900 hover:bg-amber-600 hover:text-white px-10 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center justify-center text-lg">
+          <i class="fas fa-calendar-check mr-2"></i>
+          Reservar Ahora
+        </a>
+        <a href="menu.html" class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-medium transition-all duration-300 hover:bg-white hover:text-stone-900 inline-flex items-center justify-center text-lg">
+          <i class="fas fa-book-open mr-2"></i>
+          Ver Carta
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    initNavbar('inicio');
+    initFooter();
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const data = window.RESTAURANT_DATA;
+
+      // Renderizar especialidades
+      const espContainer = document.getElementById('especialidades-container');
+      if (espContainer) {
+        espContainer.innerHTML = data.especialidades.map((e, i) => `
+          <div class="group animable" style="animation-delay: ${i * 0.15}s;">
+            <div class="relative overflow-hidden rounded-xl shadow-lg aspect-square">
+              <img src="${e.imagen}" alt="${e.titulo}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 class="text-2xl font-serif font-bold mb-2">${e.titulo}</h3>
+                <p class="text-stone-200 text-sm">${e.descripcion}</p>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Renderizar platos destacados
+      const platosContainer = document.getElementById('platos-destacados');
+      if (platosContainer) {
+        const destacados = [
+          data.menu[1].items[0],
+          data.menu[1].items[1],
+          data.menu[1].items[2]
+        ];
+        platosContainer.innerHTML = destacados.map((p, i) => `
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden animable group" style="animation-delay: ${i * 0.15}s;">
+            <div class="relative h-56 overflow-hidden">
+              <img src="${p.imagen}" alt="${p.nombre}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+              <div class="absolute top-4 right-4 bg-amber-600 text-white px-3 py-1 rounded-full font-bold text-sm">
+                ${p.precio}
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">${p.nombre}</h3>
+              <p class="text-stone-600 text-sm">${p.descripcion}</p>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Renderizar testimonios
+      const testContainer = document.getElementById('testimonios-container');
+      if (testContainer) {
+        testContainer.innerHTML = data.testimonios.map((t, i) => `
+          <div class="testimonial-card bg-white p-6 rounded-xl shadow-md animable border border-stone-100" style="animation-delay: ${i * 0.1}s;">
+            <div class="flex items-center mb-4">
+              <img src="${t.imagen}" alt="${t.nombre}" class="w-12 h-12 rounded-full object-cover mr-3">
+              <div>
+                <p class="font-semibold text-stone-900 text-sm">${t.nombre}</p>
+                <div class="flex">
+                  ${'<i class="fas fa-star text-amber-500 text-xs"></i>'.repeat(t.estrellas)}
+                </div>
+              </div>
+            </div>
+            <p class="text-stone-600 italic text-sm">"${t.comentario}"</p>
+          </div>
+        `).join('');
+      }
+
+      setTimeout(() => {
+        if (window.initScrollAnimations) window.initScrollAnimations();
+      }, 100);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bella Vista - Galería</title>
+  <meta name="description" content="Descubre el ambiente y los platos de Bella Vista a través de nuestra galería.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-stone-50">
+
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
+
+  <!-- Hero Page -->
+  <section class="relative h-96 flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=1920&q=80" 
+           alt="Galería" 
+           class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
+    </div>
+    <div class="relative z-10 text-center px-4">
+      <p class="text-amber-400 uppercase tracking-[0.3em] text-sm mb-3 animate-fade-in">Imágenes</p>
+      <h1 class="text-6xl md:text-7xl font-serif font-bold text-white animate-fade-in-up drop-shadow-2xl">Nuestra Galería</h1>
+      <p class="text-stone-200 mt-4 max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s;">
+        Un recorrido visual por nuestros espacios y creaciones
+      </p>
+    </div>
+  </section>
+
+  <!-- Filtros -->
+  <section class="bg-white border-b border-stone-200 sticky top-20 z-40 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex overflow-x-auto py-4 space-x-2 justify-center" id="filtros-galeria"></div>
+    </div>
+  </section>
+
+  <!-- Galería Grid -->
+  <section class="py-16 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="galeria-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="hidden fixed inset-0 z-50 bg-black/95 items-center justify-center p-4">
+    <button id="lightbox-close" class="absolute top-6 right-6 text-white text-3xl hover:text-amber-500 transition-colors z-10">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="lightbox-content max-w-5xl w-full">
+      <img id="lightbox-img" src="" alt="" class="w-full max-h-[80vh] object-contain rounded-xl mb-4">
+      <p id="lightbox-caption" class="text-white text-center text-2xl font-serif"></p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="py-24 hero-gradient-6 text-white relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 text-center relative z-10 animable">
+      <h2 class="text-5xl font-serif font-bold mb-6">Viví la experiencia en persona</h2>
+      <p class="text-xl text-stone-200 mb-10">Las imágenes solo muestran una parte. Reservá tu mesa y descubrilo.</p>
+      <a href="contacto.html" class="btn-primary inline-flex items-center bg-amber-600 hover:bg-amber-700 text-white px-10 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-2xl text-lg">
+        <i class="fas fa-calendar-check mr-2"></i>
+        Reservar Ahora
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    initNavbar('galeria');
+    initFooter();
+
+    let filtroActivo = 'todos';
+
+    function renderFiltros() {
+      const container = document.getElementById('filtros-galeria');
+      const data = window.RESTAURANT_DATA;
+      const categorias = ['todos', ...new Set(data.galeria.map(g => g.categoria))];
+      
+      container.innerHTML = categorias.map(cat => `
+        <button onclick="filtrarGaleria('${cat}')" 
+          class="filtro-btn px-6 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-300 capitalize ${
+            filtroActivo === cat 
+              ? 'bg-amber-600 text-white shadow-lg' 
+              : 'bg-stone-100 text-stone-600 hover:bg-stone-200'
+          }">
+          ${cat === 'todos' ? 'Todos' : cat}
+        </button>
+      `).join('');
+    }
+
+    function renderGaleria() {
+      const container = document.getElementById('galeria-grid');
+      const data = window.RESTAURANT_DATA;
+      const items = filtroActivo === 'todos' 
+        ? data.galeria 
+        : data.galeria.filter(g => g.categoria === filtroActivo);
+      
+      const icons = ['fa-utensils', 'fa-wine-glass-alt', 'fa-chair', 'fa-fire', 'fa-leaf', 'fa-ice-cream', 'fa-table', 'fa-hat-chef', 'fa-glass-cheers', 'fa-moon', 'fa-pepper-hot', 'fa-tree'];
+      
+      container.innerHTML = items.map((item, i) => {
+        return `
+          <div class="gallery-item animable" 
+            data-title="${item.titulo}" 
+            data-imagen="${item.imagen}"
+            data-emoji="${item.emoji || '🍽️'}"
+            data-color1="${item.color1 || '#78350f'}"
+            data-color2="${item.color2 || '#1c1917'}"
+            style="animation-delay: ${i * 0.1}s;">
+            <img src="${item.imagen}" alt="${item.titulo}" class="w-full h-full object-cover" 
+                 onerror="this.onerror=null; this.src=window.generarFallbackSVG('${item.titulo.replace(/'/g, "\\'")}', '${item.color1 || '#78350f'}', '${item.color2 || '#1c1917'}', '${item.emoji || '🍽️'}');">
+            <div class="gallery-overlay">
+              <div class="text-center text-white">
+                <i class="fas fa-search-plus text-3xl mb-2"></i>
+                <p class="font-serif text-lg">${item.titulo}</p>
+                <p class="text-xs uppercase tracking-wider opacity-80 mt-1">${item.categoria}</p>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+      
+      // Reinicializar lightbox
+      setTimeout(() => {
+        if (window.initGallery) window.initGallery();
+        if (window.initScrollAnimations) window.initScrollAnimations();
+      }, 100);
+    }
+
+    function filtrarGaleria(cat) {
+      filtroActivo = cat;
+      renderFiltros();
+      renderGaleria();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderFiltros();
+      renderGaleria();
+    });
+  </script>
+
+</body>
+</html>
